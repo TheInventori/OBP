@@ -1,0 +1,4 @@
+pocet vygenerovanych cisel: 256
+sucet vygenerovanych cisel: 12301
+pocet cisel vacsich ako priemer: 130
+pocet cisel mensich ako priemer: 126

@@ -1,0 +1,2 @@
+# textove retazce v C
+
