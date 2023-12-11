@@ -1,1 +1,0 @@
-# rekurzivne funkcie
