@@ -39,3 +39,24 @@ scanf("%50s", meno); // %50s - uvedenie maximalnej dlzky retazca
 
 printf("Ahoj %s", meno);
 ```
+
+nacitavanie retazca sa ukonci medzerou
+
+oprava: 
+```C
+scanf(" %50[^\n]s", meno); // medzera necha prazdne znaky v bufferi  [^\n] - nacita vsetko okrem noveho riadku
+```
+
+
+## Standardne funkcie pre pracu s retazcami
+je nutne pripojit kniznicu string.h
+`#include <string.h>`
+
+- `strlen();`
+  - vrati viditelnu dlzku retazca (bez znaku \0)
+- `strcat();`
+  - 2 textove retazce spoji do jedneho (v prvom retazci musi byt dost miesta)
+  - ```C
+    char text[30] = "srna";
+    strcat(text, " bezi lesom");
+    ```
