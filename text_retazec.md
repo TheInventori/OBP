@@ -69,7 +69,17 @@ je nutne pripojit kniznicu string.h
 - `strchr();`
   - vyhlada v texte nejaky znak
   - odcita: adresa znaku - adresa zaciatku retazca --> pozicia hladaneho znaku v poli
-  - ```C
-    char text[5];
-    strcpy(text, "duha");
-    ```
+- `strstr();`
+  - vyhlada v texte retazec
+- `strcmp();`
+  - porovnava 2 retazce
+  - vrati:
+    - zaporne cislo, ak je prvy pred druhym
+    - 0, ak su zhodne
+    - kladne cislo, ak je prvy za druhym
+- `strrchr();`
+  - take iste ako `strchr()` ale prehladava odzadu
+- `strncat();`
+  - take iste ako `strncat();` ale **n** udava limit znakov, ktore sa spracovavaju
+  - neobsahuje \0
+  - po presiahnuti limitu, retazec usekne
