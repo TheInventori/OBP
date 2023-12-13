@@ -60,3 +60,16 @@ je nutne pripojit kniznicu string.h
     char text[30] = "srna";
     strcat(text, " bezi lesom");
     ```
+- `strcpy();`
+  - naklonuje textovy retazec do inej premennej
+  - ```C
+    char text[5];
+    strcpy(text, "duha");
+    ```
+- `strchr();`
+  - vyhlada v texte nejaky znak
+  - odcita: adresa znaku - adresa zaciatku retazca --> pozicia hladaneho znaku v poli
+  - ```C
+    char text[5];
+    strcpy(text, "duha");
+    ```
