@@ -83,3 +83,11 @@ je nutne pripojit kniznicu string.h
   - take iste ako `strncat();` ale **n** udava limit znakov, ktore sa spracovavaju
   - neobsahuje \0
   - po presiahnuti limitu, retazec usekne
+- `gets();`
+  - nacita do retazca cely riadok az po znak ukoncenia riadku `\n`
+  - pokal bol riadok prazdny, vrat NULL a do retazca na prvu poziciu vrati `\0`
+  - zaroven vracia pointer na retazec
+- `puts();`
+  - riadkovo orientovanie tlacenie na obrazovku
+  - vypise string na obrazovku a doplni ho znakom `\n`
+  - vracia nezaporne cislo
