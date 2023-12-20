@@ -4,7 +4,7 @@
 
 // vytvorte program, ktory nahradi v retazci lubovolny znak inym lubovolnym znakom
 // vrati pocet vyskytov lubovolneho retazca
-// pripoki retazec2 na koniec retazca1
+// pripoji retazec2 na koniec retazca1
 // zmeni vsetky pismena na velke a vytvori z textu schody smerom dole
 
 
@@ -12,23 +12,39 @@ int main() {
 	char text[100];
 	char letter1;
 	char letter2;
+    int count = 0;
 	
 	printf("zadaj retazec: ");
 	gets(text);
 	
 	printf("zadaj hladany znak: ");
-	getc(letter1);
+	scanf(" %c", &letter1);
 	
 	printf("zadaj nahradny znak: ");
-	getc(letter2);
+	scanf(" %c", &letter2);
 	
 	for(int i = 0; i < strlen(text); i++) {
 		if(text[i] == letter1) {
 			text[i] = letter2;
+            count++;
 		}
 	}
-	
-	puts(text);
+
+    printf("\n%s\n%d\n", text, count);
+
+    for(int i = 0; i < strlen(text); i++) {
+        if(text[i] >= 97 && text[i] <= 122) {
+            text[i] -= 32;
+        }
+
+        printf("\n");
+
+        for(int j = 0; j < i; j++) {
+            printf(" ");
+        }
+
+        printf("%c", text[i]);
+    }
 	
 	return 0;
 }
