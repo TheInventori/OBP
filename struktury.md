@@ -1,8 +1,9 @@
 # struktury
 
-pole - postupnost za sebou iducich premennych rovnakeho typu
+- pole - postupnost za sebou iducich premennych rovnakeho typu
 
-struktura - je to suhrn jednej alebo viacerych premennych rozneho alebo rovnakeho typu ulzenych pod jedinecnym typom
+- struktura 
+    - je to suhrn jednej alebo viacerych premennych rozneho alebo rovnakeho typu ulzenych pod jedinecnym typom
     - pomaha nam organizovat zlozite data, pretoze umoznue zaobchadzat so skupinou suviciacych premennych ako s celkom a nie ako so samostantnymi objektmi
 
 
