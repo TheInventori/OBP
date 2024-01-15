@@ -54,7 +54,7 @@ int main(int argc, char const *argv[])
                 pokracovanie = 0;
         }
         printf("Chces vytvorit novu kruznicu? <A/N>");
-        scanf(" %d", &znakk);
+        scanf("%d", &znakk);
 
         if ((znakk != 'A') && (znakk != 'a'))
             koniec = 0;

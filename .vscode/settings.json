@@ -60,5 +60,6 @@
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "sml": "cd $dir && sml $fileName",
         "mojo": "mojo run"
-    }
+    },
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true
 }

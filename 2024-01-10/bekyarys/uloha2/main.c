@@ -9,18 +9,18 @@ typedef struct{
     char ulica[51];
 }Uzivatel;
 
-void getold(Uzivatel* uzivatel){
-    uzivatel->vek++;
+void getold(Uzivatel uzivatel){
+    uzivatel.vek++;
 }
 
 int main(){
 
-    Uzivatel* p_karel = malloc(sizeof(Uzivatel));
+    Uzivatel karel = malloc(sizeof(Uzivatel));
 
 
-    Uzivatel* p_karel = {"Karel Got", 80,"Hlavna 420"};
+    Uzivatel karel = {"Karel Got", 80,"Hlavna 420"};
 
-    Uzivatel user = *p_karel;
+    Uzivatel user = karel;
 
     karel.vek = 20;
     
