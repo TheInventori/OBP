@@ -13,3 +13,10 @@
 1.
 1.
 1.
+```Java
+public class hello{
+    public static void main(String[] args) {
+        System.out.println("Hello 3.B");
+    }
+}
+```
