@@ -1,6 +1,8 @@
 {
     "files.associations": {
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "math.h": "c",
+        "string.h": "c"
     },
     "code-runner.runInTerminal": true,
     "C_Cpp.clang_format_fallbackStyle": "LLVM",
