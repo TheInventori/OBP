@@ -63,5 +63,6 @@
         "sml": "cd $dir && sml $fileName",
         "mojo": "mojo run"
     },
-    "C_Cpp.codeAnalysis.clangTidy.enabled": true
+    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "java.debug.settings.onBuildFailureProceed": true
 }
