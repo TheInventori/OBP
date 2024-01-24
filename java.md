@@ -28,7 +28,23 @@ Program v jave obsahuje jednu alebo viacero tried, musi obsahovat metodu main
 ## Trieda (Class)
 * programatorom zadefinovany zlozeny datovy typ, ktory zapuzdruje datove polozky a metody
 * klucove slovo na vytvorenie triedy - `class` - potom nasleduje nazov triedy
-* napr. `class reggin`
+* napr. `class Reggin`
+* Nazov triedy vzdy VELKYM pismenom
+* trieda je sablona pre objekty a objekt je instanciou triedy
+* ked su jednotlive objekty vytvorene, zdedia vsetky premenne a metody z triedy
+* premenne triedy su atributy
+```Java
+class Strom{
+    String druh;
+    int vek;
+    double vyska;
+    double hrubka;
+
+    Strom dub;
+    dub = new Strom();
+}
+```
+
 
 ### Datove polozky
 * popisuju vlastnosti objektu --> popisuju vlastnosti realneho objektu
@@ -41,7 +57,7 @@ Program v jave obsahuje jednu alebo viacero tried, musi obsahovat metodu main
 * **Proceduralne programovanie:** <br>
     pisanie funkcii / procedur (metod), ktore vykonavaju operacie s udajmi
 * **Objektovo orientovane programovanie:** vytvaranie **objektov,** ktore obsahuju udaje aj metody
-
++++
 ### Vyhody OOP
 * program je rychlejsi a lahsie sa spusta
 * poskytuje jasnu strukturu pre programy
@@ -49,3 +65,10 @@ Program v jave obsahuje jednu alebo viacero tried, musi obsahovat metodu main
 * umoznuje vytvarat plne znovu pouzitelne aplikacie s mensim mnozstvom kodu a kratsim casom vyvoja
 
 
+
+
+
+<br><br><br><br><br>
+*poznamky pisal Hornak*
+
+vobec
