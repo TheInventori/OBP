@@ -47,7 +47,7 @@ class Strom{
 
 
 ### Datove polozky
-* popisuju vlastnosti objektu --> popisuju vlastnosti realneho objektu
+* popisuju stav/vlastnosti objektu --> popisuju stav/vlastnosti realneho objektu
 
 ### Metody
 * urcuju alebo definuju sposob komunikacie s objektom alebo medzi objektmi
