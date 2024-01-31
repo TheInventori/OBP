@@ -2,67 +2,40 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class Ahoj {
-    public static String scanf(){
+    public static Double scanf(){
         Scanner myObj = new Scanner(System.in);
-        String temp = myObj.nextLine();
+        double temp = myObj.nextDouble();
 
         return temp;
     }
 
-    public static double plus(double cislo){
-        double temp = Double.parseDouble(scanf());
-        
-        return cislo + temp;
-    }
-    public static double minus(double cislo){
-        double temp = Double.parseDouble(scanf());
-        
-        return cislo - temp;
-    }
-    public static double krat(double cislo){
-        double temp = Double.parseDouble(scanf());
-        
-        return cislo * temp;
-    }
-    public static double deleno(double cislo){
-        double temp = Double.parseDouble(scanf());
-        
-        return cislo / temp;
-    }
-    public static double mocnina(double cislo) {
-        double temp = Double.parseDouble(scanf());
-        
-        return Math.pow(cislo, temp);
-    }
-    public static void odmocnina(double cislo) {
-        double temp = Double.parseDouble(scanf());
-        
-        return Math.(cislo, temp);
-    }
-
     public static void main(String[] args) {
+        Scanner myObj = new Scanner(System.in);
         boolean pokracovanie = true;
-        double cislo = Double.parseDouble(scanf());
+        double cislo = scanf();
         do{
-            String znak = scanf();
+            String znak = myObj.next();
             switch (znak) {
                 case "+":
-                    cislo = plus(cislo);
+                    cislo = Calc.plus(cislo);
                     break;
                 case "-":
-                    cislo = minus(cislo);
+                    cislo = Calc.minus(cislo);
                     break;
                 case "*":
-                    cislo = krat(cislo);
+                    cislo = Calc.krat(cislo);
                     break;
                 case "/":
-                    cislo = deleno(cislo);
+                    cislo = Calc.deleno(cislo);
                     break;
                 case "=":
                     pokracovanie = false;
                     break;
                 case "^":
-                    cislo = mocnina(cislo);
+                    cislo = Calc.mocnina(cislo);
+                    break;
+                case "v":
+                    cislo = Calc.odmocnina(cislo);
                     break;
                 default:
                     break;
