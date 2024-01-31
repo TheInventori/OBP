@@ -64,7 +64,9 @@ class Strom{
 * pomaha udrziavat kod Java v suchu "Neopakujte sa" a ulahcuje udrzbu, upravu a ladenie kodu
 * umoznuje vytvarat plne znovu pouzitelne aplikacie s mensim mnozstvom kodu a kratsim casom vyvoja
 
-
+## take veci
+* `final` - nieco ako const
+* text - `System.out.println("Meno: " + ahoj1.fname + " " + ahoj1.lname);`
 
 
 
