@@ -1,46 +1,30 @@
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Ahoj {
-    public static Double scanf(){
+    public static String scanf(){
         Scanner myObj = new Scanner(System.in);
-        double temp = myObj.nextDouble();
+        String temp = myObj.nextLine();
+
+        myObj.close();
 
         return temp;
     }
 
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);
-        boolean pokracovanie = true;
-        double cislo = scanf();
-        do{
-            String znak = myObj.next();
-            switch (znak) {
-                case "+":
-                    cislo = Calc.plus(cislo);
-                    break;
-                case "-":
-                    cislo = Calc.minus(cislo);
-                    break;
-                case "*":
-                    cislo = Calc.krat(cislo);
-                    break;
-                case "/":
-                    cislo = Calc.deleno(cislo);
-                    break;
-                case "=":
-                    pokracovanie = false;
-                    break;
-                case "^":
-                    cislo = Calc.mocnina(cislo);
-                    break;
-                case "v":
-                    cislo = Calc.odmocnina(cislo);
-                    break;
-                default:
-                    break;
-            }
-        }while(pokracovanie);
+        System.out.println("Zadaj priklad oddeleny medzerami: (napr.: 3 + 3)");
+        String zadanie = scanf();
+
+        String[] znaky = zadanie.split("\\s+");
+
+        double cislo = Double.parseDouble(znaky[0]);
+        for (int i = 1; i < znaky.length - 1; i += 2){
+            String znak = znaky[i];
+
+            double cislo2 = Double.parseDouble(znaky[i+1]);
+
+            cislo = Calc.vracanie(znak, cislo, cislo2);
+        }  
+
         if ((int) cislo == cislo){
             int icislo = (int) cislo;
             System.out.println(icislo);
@@ -48,5 +32,6 @@ public class Ahoj {
         else{ 
             System.out.println(cislo);
         }
+        
     }
 }

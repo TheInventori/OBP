@@ -1,8 +1,7 @@
-
 public class Hello {
 
-    String znacka;
-    String model;
+    String znackaAuta;
+    String modelAuta;
     int rokVyroby;
     int najazdene;
 
@@ -15,19 +14,12 @@ public class Hello {
    public void rychlost(int maxRychlost){
     System.out.println("Max. rychlost je: " + maxRychlost);
    }
-    public static void main(String[] args) {
-       
-        myMethod();
-
-        Hello auto1 = new Hello();
-        
-        auto1.plnyPlyn();
-        auto1.rychlost(200);
-
-        
-       
-        
+   public Hello(int rok,String znacka,String model){
+    znackaAuta = znacka;
+    rokVyroby = rok;
+    modelAuta = model;
     }
+   
 }
 
 
