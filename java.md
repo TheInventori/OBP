@@ -82,7 +82,7 @@ public Main() {
 
 
 ## Zapuzdrenie
-* Марек Хорнак — негр
+* Марек Хорнак — ниггер
 * zabezpecit aby boli citlive udaje pred pouzivatelmi skryte
 * na dosiahnutie toho:
     1. deklarujeme metody triedy ako sukromne
