@@ -82,7 +82,6 @@ public Main() {
 
 
 ## Zapuzdrenie
-* Марек Хорнак — негр
 * zabezpecit aby boli citlive udaje pred pouzivatelmi skryte
 * na dosiahnutie toho:
     1. deklarujeme metody triedy ako sukromne
@@ -90,6 +89,20 @@ public Main() {
     1. vokajsia trieda k atributom private ma pristup lek ak poskytneme metodu: 
         * `get` - vrati hodnotu premennej
         * `set` - nstavi hodnotu premennej
+
+## Scanner
+```Java
+import java.util.Scanner // iba raz v kode
+Scanner vstup = new Scanner(System.in) // iba raz v kode
+a = vstup.nextInt() // nacitanie int do a
+text = vstup.nextln() // nacitanie retazca
+```
+
+
+
+
+
+
 
 <br><br><br><br><br>
 *poznamky pisal Hornak*

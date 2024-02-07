@@ -1,0 +1,23 @@
+public class ClassApp{
+    public static void main(String[] args) {
+        Auto auto1 = new Auto();
+        Auto auto2 = new Auto();
+
+        auto1.rychlost = 50;
+        auto1.cena = 50000;
+        auto2.rychlost = 100;
+        auto2.cena = 12000;
+
+        if (auto1.rychlost < 50){
+            auto1.zrychli();
+        }
+        if (auto1.rychlost > 120){
+            auto1.spomal();
+        }
+
+        auto2.zastav();
+
+        auto1.vypis();
+        auto2.vypis();
+    }
+}
