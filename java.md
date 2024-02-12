@@ -82,7 +82,6 @@ public Main() {
 
 
 ## Zapuzdrenie
-* Марек Хорнак — негр
 * zabezpecit aby boli citlive udaje pred pouzivatelmi skryte
 * na dosiahnutie toho:
     1. deklarujeme metody triedy ako sukromne
@@ -93,14 +92,16 @@ public Main() {
 
 ## Scanner
 ```Java
-import java.util.Scanner // iba raz v kode
-Scanner vstup = new Scanner(System.in) // iba raz v kode
-a = vstup.nextInt() // nacitanie int do a
-text = vstup.nextln() // nacitanie retazca
+import java.util.Scanner; // iba raz v kode
+Scanner vstup = new Scanner(System.in); // iba raz v kode
+a = vstup.nextInt(); // nacitanie int do a
+text = vstup.nextln(); // nacitanie retazca
 ```
 
-
-
+## Pretazenie metod
+Pretazene metody su metody, ktore maju rovnake mena ale rozne hlavicky
+* metoda je pretazena, ak sa jej formalne parametre lisia poctom, alebo typom, alebo poradim
+* metodu nie je mozne pretazit len zmenou typu navratovej hodnoty 
 
 
 
