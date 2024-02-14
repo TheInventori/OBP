@@ -54,6 +54,7 @@ class Strom{
 * na zaciatku zapisujeme prikazy len do metody `public static void main(String[] args) {}`
 * `static` metody mozu existovat aj bez vytvorenia objektu
 * `public` ma pristup iba objekty triedy
+* metody v Jave su rovnocenne
 
 ## Preco je java OOP?
 * **Proceduralne programovanie:** <br>
@@ -72,14 +73,25 @@ class Strom{
 
 ## Konstruktor
 * specialna metoda, ktora sa pouziva na inicializaciu objektov
+* inicializuje hodnoty atributov
 * nazov konstruktora musi byt velkym pismenom a je rovnaky ako nazov tredy
 * konstruktor sa vola pri vytvarani objektu
+* v konstruktore nemoze byt `return` a `void`!!
+* `this.daco = daco`
 ```Java
 public Main() {
     premenna1 = 69;
 }
 ```
 
+### `this`
+* klucove slovo, ktore sluzi na odlisenie nazvu parametra tj. lokalnej premennej od nazvu atributu triedy
+* this vyjadruje prislusnost triede respektive instancii
+
+
+* Ключевое слово, используемое для различения имени параметра, т.е. локальной переменной из имени атрибута класса
+* 用于区分参数名称的关键字，即 来自类属性名称的局部变量
+* کلمه کلیدی مورد استفاده برای متمایز کردن نام پارامتر، یعنی. یک متغیر محلی از نام ویژگی کلاس
 
 ## Zapuzdrenie
 * zabezpecit aby boli citlive udaje pred pouzivatelmi skryte
@@ -102,6 +114,15 @@ text = vstup.nextln(); // nacitanie retazca
 Pretazene metody su metody, ktore maju rovnake mena ale rozne hlavicky
 * metoda je pretazena, ak sa jej formalne parametre lisia poctom, alebo typom, alebo poradim
 * metodu nie je mozne pretazit len zmenou typu navratovej hodnoty 
+
+## Volanie metod inymi metodami tej istej triedy
+* metody v jednej triede su si rovne
+* metody instancii mozu lubovolne volat ine metody instancii danej triedy
+* metody triedy nemozu volat jej instancie a pouzivat jej premenne (asi (neviem (hral som tetris 😊)))
+* konstruktor triedy moze volat vsetky metody a konstruktory triedy
+
+## Pouzitie statickych metod v objektoch
+* staticka metoda z `java.core.api`
 
 
 
