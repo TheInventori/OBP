@@ -79,8 +79,9 @@ class Strom{
 * v konstruktore nemoze byt `return` a `void`!!
 * `this.daco = daco`
 ```Java
-public Main() {
+public Main(int test) {
     premenna1 = 69;
+    this.test = test; // zmeni permennu test v triede na hodnotu premennej test v konstruktore
 }
 ```
 
@@ -109,6 +110,8 @@ Scanner vstup = new Scanner(System.in); // iba raz v kode
 a = vstup.nextInt(); // nacitanie int do a
 text = vstup.nextln(); // nacitanie retazca
 ```
+* Nazov scannera si davame aky chceme
+* Vytvarame novy objekt triedy scanner, do zatvoriek dame `System.in`
 
 ## Pretazenie metod
 Pretazene metody su metody, ktore maju rovnake mena ale rozne hlavicky
