@@ -87,7 +87,7 @@ public Main(int test) {
 
 ### `this`
 * klucove slovo, ktore sluzi na odlisenie nazvu parametra tj. lokalnej premennej od nazvu atributu triedy
-* this vyjadruje prislusnost triede respektive instancii
+* `this` vyjadruje prislusnost triede respektive instancii
 
 
 * Ключевое слово, используемое для различения имени параметра, т.е. локальной переменной из имени атрибута класса
@@ -127,10 +127,30 @@ Pretazene metody su metody, ktore maju rovnake mena ale rozne hlavicky
 ## Pouzitie statickych metod v objektoch
 * staticka metoda z `java.core.api`
 
+## Polia
+* referencny datovy typ
 
+### deklaracia
+* pri deklaracii sa neudava velkost - vsetky polia su alokovane dynamicky
 
+```Java
+int []cisla;
+```
 
-<br><br><br><br><br>
-*poznamky pisal Hornak*
+* pred prvym pouzitim pridelim pamat pomocou operatora `new`
 
-vobec
+```Java
+cisla = new int[5];
+```
+
+```Java
+// jednoriadkovy zapis
+int []cisla = new int[5];
+```
+
+```Java
+// definicia 
+int []cisla = {1, 2, 3, 5};
+```
+
+* dlzku pola zistujeme pomocou clenskej premennej `length`, ktoru automaticky vlastni kazde pole
