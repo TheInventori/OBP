@@ -154,3 +154,78 @@ int []cisla = {1, 2, 3, 5};
 ```
 
 * dlzku pola zistujeme pomocou clenskej premennej `length`, ktoru automaticky vlastni kazde pole
+
+## Retazce
+
+* dalsi z nie primitivnych datovych typov (referencny datovy typ)
+* sluzi na uchovavanie dlhsieho textu - az do 2 GB
+* objekt triedy String (java.lang.String), ktora po deklaracii obsahuje specialne metody (prehladavanie, zistenie potu znakov a pod.)
+* nacitanie retazca znakov (celeho riadku) - prikaz nextLine()
+
+```Java
+// je potrebne si spravit scanner
+String a = vstup.nextLine();
+```
+
+### Vytvorenie retazca
+```Java 
+String veta = "Vonku svieti slnko.";
+```
+* ak compiler najde v zdrojaku text, vytvori pre neho objekt String
+
+```Java
+String s1, s2, s3, s4, s5, s6;
+byte[] bajty = {(byte) 'E', (byte) 'v', (byte) 'a'};
+char[] znaky = {'M', 'a', 'r', 't', 'i', 'n', 'a'};
+
+s1 = new String("cao");
+s2 = new String(s1);
+s3 = new String(bajty);
+s4 = new String(bajty, 1, 2); // vezmu sa 2 bajty od indexu 1
+s5 = new String(znaky);
+s6 = new String(znaky, 3, 4); // vezmu sa 4 znaky od indexu 3
+
+```
+
+* retazec pozostava zo znakov
+* kazdy znak ma v retazci svoje miesto, ktore je deinovame prostrednictvom indexu (0, 1, ..., (dlzka_retazca) - 1)
+* `String data = "Madonna";` maju znaky indexy: "M" = 0, "a" = 1, "d" = 2...
+
+### Dlzka retazca
+* metoda length() - vratenie poctu znakov ulozeneho obsahu
+```Java
+String data = "Mama";
+int dlzka = data.length();
+System.out.println(dlzka);
+```
+* do premennej dlzka sa ulozi pocet znakov, ktore obsahuje premenna data t.j. v tomto pripade 4
+
+### Inicializovane pole retazcov
+* jednotlive retazce sa zapisu v uvodzovkach, oddelene ciarkami
+
+```Java
+String[] pole = {"Dana", "Eva", "Martina"};
+for(int i = 0; i < pole.length; i++) {
+    System.out.println(pole[i]);
+}
+```
+### Spajanie retazcov - operator "+" a metoda `concat()`
+* `concat()` zo spajanych retazcov vytvori 3. retazec - povodne retazce sa nemenia
+```Java
+String a = "Steven";
+String b = "Spielberg";
+String c = a + b; // premenna c obsahuje text "StevenSpielberg" bez medzery
+String d = a + " "; // premenna d obsahuje text "Steven " s medzerou na konci
+d = d.concat(b); // obsah premennej d sa zmeni tak, ze sa k nemu prida obsah premennej b, vysledok ulozeny v premennej d bude "Steven Spielberg"
+```
+* vysledkom spojenia akejkolvek premennej s retazcom je retazec
+* ak pripocitame (+) obsah premennej k akemukolvek retazcu, tento obsah sa transformuje (skonvertuje) na retazec
+### Dalsie metody
+* metoda `toLowerCase()` - zmeni vsetky pismena na male
+* metoda `toUpperCase()` - zmeni vsetky pismena na velke
+* metoda `equals()` - ak su retazce zhodne, vysledkom je true, inak false
+* metoda `equalsIgnoreCase()` - nerozlisuje velke a male pismena inak podobne ako `equals()`
+* metoda `compareTo()`
+* metoda `compareToIgnoreCase()` - nerozlisuje velke a male pismena
+    * metody `compareTo...` vracaju hodnoty: -1 (ak je retazec v parametri vacsi), 1 (ak je retazec v parametri mensi), 0 (pri zhode)
+* metoda `replace()` - zameni znaky v retazci, ma 2 parametre, zameni 1. znak za 2.
