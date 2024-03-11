@@ -229,3 +229,24 @@ d = d.concat(b); // obsah premennej d sa zmeni tak, ze sa k nemu prida obsah pre
 * metoda `compareToIgnoreCase()` - nerozlisuje velke a male pismena
     * metody `compareTo...` vracaju hodnoty: -1 (ak je retazec v parametri vacsi), 1 (ak je retazec v parametri mensi), 0 (pri zhode)
 * metoda `replace()` - zameni znaky v retazci, ma 2 parametre, zameni 1. znak za 2.
+* metoda `substring(x, y)` - vrati z retazca znaky od zadanej pozicie az po poziciu, ktora sa nachadza pred druhym parametrom
+    * metoda `substring(x)` - vrati znaky od zadanej pozicie az do konca retazca
+```Java
+String data = "Phoenix";
+System.out.println(data.substring(2, 5));
+
+// funkcia substring() vrati "oen"
+```
+```Java
+String s = "male a VELKE";
+char[] znaky = new char[10];
+
+s.getChars(2, 9, znaky, 0);
+System.out.println(znaky); // "le a VE"
+
+// Kopiruje podretazec retazca s od indexu 2 po index 8 do pola znakov znaky od 0-teho indexu
+```
+* metody `startsWith(x)` a `endsWith(x)` - vratia `true` alebo `false` podla toho ci retazec zacina alebo konci s retazcom v parametri
+* metoda `trim()` - uberie vsetky medzery, tabulatory, a nove riadky na zaciatku i konci retazca
+* metoda `charAt(position)` - vrati znak na pozicii v parametri
+* metoda `lastIndexOf("VEL")` - ak je znak najdeny, vracia sa jeho index, ak nie je najdeny vrati sa -1
