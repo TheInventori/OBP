@@ -1,14 +1,16 @@
+// Napiste program ktory zo zadaneho retazca na vstupe postupne
+// odoberie jednotlive znaky a vlozi ich do noveho obrateneho retazca.
+// Vstup obsahuje retazec a vystup je v tvare povodny_retazec, obrateny_retazec
+// a hodnota true ak su rovnake a hodnota false ak nie
+
+// Napiste program, ktory bude generovat palindromy 
+
+// Vytvorte metodu tlacPI, ktora bude mat parameter int desatMiesta, ktora vam vytlaci cislo pi na pozadovany pocet desatinnych miest
+
+// Napste program, ktory metodou eratostenhenovosito vypise vsetky prvocisla od 1 do n
+
 public class Stringss {
     public static void main(String[] args) {
-        String s1, s2, s3, s4, s5, s6;
-        byte[] bajty = {(byte) 'E', (byte) 'v', (byte) 'a'};
-        char[] znaky = {'M', 'a', 'r', 't', 'i', 'n', 'a'};
-
-        s1 = new String("cao");
-        s2 = new String(s1);
-        s3 = new String(bajty);
-        s4 = new String(bajty, 1, 2); // vezmu sa 2 bajty od indexu 1
-        s5 = new String(znaky);
-        s6 = new String(znaky, 3, 4); // vezmu sa 4 znaky od indexu 3
+        Scanner
     }
 }
