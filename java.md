@@ -155,6 +155,21 @@ int []cisla = {1, 2, 3, 5};
 
 * dlzku pola zistujeme pomocou clenskej premennej `length`, ktoru automaticky vlastni kazde pole
 
+### metody na triede arrays
+
+musime importovat `java.util.Arrays`
+```Java
+import java.util.Arrays;
+```
+* metoda `sort(array_name)` - zoradi prvky pola v pripade cisel od najmensieho po najvacsie alebo v pripade retazcov abecedne
+
+* metoda `binarySearch(array_name, x)` - vyhlada prvok v poli, POLE MUSI BYT NAJPRV ZORADENE, x = hladany prvok, ak je prvok najdeny, vracia sa jeho index, ak nie je najdeny vrati sa -1
+
+* metoda `copyOfRange(src_array_name, start_index, end_index)` - skopiruje cast pola do ineho pola, ak dame start napr index 2 a end index 5 tak skopiruje indexy 2, 3, 4
+
+### pole objektov
+* v pripade pola objektov potrebujem vytvorit instancie objektu ku kazdemu prvku pola
+
 ## Retazce
 
 * dalsi z nie primitivnych datovych typov (referencny datovy typ)
@@ -250,3 +265,5 @@ System.out.println(znaky); // "le a VE"
 * metoda `trim()` - uberie vsetky medzery, tabulatory, a nove riadky na zaciatku i konci retazca
 * metoda `charAt(position)` - vrati znak na pozicii v parametri
 * metoda `lastIndexOf("VEL")` - ak je znak najdeny, vracia sa jeho index, ak nie je najdeny vrati sa -1
+
+
