@@ -170,6 +170,7 @@ import java.util.Arrays;
 ### pole objektov
 * v pripade pola objektov potrebujem vytvorit instancie objektu ku kazdemu prvku pola
 
+
 ## Retazce
 
 * dalsi z nie primitivnych datovych typov (referencny datovy typ)
@@ -262,8 +263,42 @@ System.out.println(znaky); // "le a VE"
 // Kopiruje podretazec retazca s od indexu 2 po index 8 do pola znakov znaky od 0-teho indexu
 ```
 * metody `startsWith(x)` a `endsWith(x)` - vratia `true` alebo `false` podla toho ci retazec zacina alebo konci s retazcom v parametri
-* metoda `trim()` - uberie vsetky medzery, tabulatory, a nove riadky na zaciatku i konci retazca
+* metoda `trim()` - odoberie vsetky medzery, tabulatory, a nove riadky na zaciatku i konci retazca
 * metoda `charAt(position)` - vrati znak na pozicii v parametri
 * metoda `lastIndexOf("VEL")` - ak je znak najdeny, vracia sa jeho index, ak nie je najdeny vrati sa -1
 
+## Array list
+* musime importnut:
+
+```Java
+import java.util.ArrayList;
+```
+
+* hovori sa tomu genericka trieda
+* parametrizovane datove typy, ako parameter sluzi trieda, s kt. budeme pracovat
+* POLE PREMENLIVEJ DLZKY
+* k prvkom pola pristupujeme cez indexy
+* vytvarame ho `ArrayList <Integer> list;` - parameter je trieda Integer
+* vytvarame ho `ArrayList <String> alist;` - parameter je trieda String
+
+```Java
+import java.util.ArrayList;
+
+
+ArrayList<Integer> list;                            // deklaracia premennej
+list = new ArrayList<Integer>();                    // vytvorenie instancie
+ArrayList<String> alist = new ArrayList<String>();  // deklaracia premennej 
+                                                    //          +
+                                                    // vytvorenie instancie
+                                                    
+list.add(10);                                       // pridame cislo 10 na koniec pola
+list.add(25);                                       // pridame cislo 25 na koniec pola
+list.add(7);                                        // pridame cislo 7 na koniec pola
+list.add(2, 100);                                   // pridame cislo 100 na index 2 v 
+                                                    // poli a vsetky vacsie indexy 
+                                                    // posunie o 1
+list.set(1, 23);                                    // nastavi cislo 23 na index 1
+list.remove(2);                                     // odstrani index 2
+list.size();                                        // vrati velkost ArrayListu "list"
+```
 
