@@ -302,3 +302,36 @@ list.remove(2);                                     // odstrani index 2
 list.size();                                        // vrati velkost ArrayListu "list"
 ```
 
+## Dedicnost
+
+* moznost pridat k zakladnej triede (rodicovskej/supertriede/predkovi) dalsie vlastnostia tak vytvorit odvodenu triedu (zdedenu/potomka/dcersku)
+* dedenie je nastroj pre vytvaranie opakovane vyuzitelnych (reusable) programovych modulov
+* dedenie umoznuje:
+    * co bolo v zakladnej triede dobre, ponechat
+    * co nam chybalo, dodat
+    * co sa nam nepacilo, zmenit
+* v Jave existuje len jednoducha dedicnost, t.j. kazda tireda moze mat len 1 priameho predka
+
+### Realizacia dedicnosti
+
+```JAVA
+//           potomok        rodic
+public class Kvader extends Obdlznik {
+    public int hlbka;
+
+    // v triede kvader dochadza k prekritiu/zatienenie (overwrite) metody dlzkaUhlopiecky
+    public Kvader(int sirka, int vyska, int hlbka) {
+        // konstruktor rodica
+        super(sirka, vyska);
+        this.hlbka = hlbka;
+    }
+
+    public double dlzkaUhlopriecky() {
+        //                        volanie metody pomocou super.daco()
+        return Math.sqrt(Math.pow(super.dlzkaUhlopriecky(), 2) + Math.pow(hlbka, 2));
+    }
+}
+```
+
+### ak nechceme aby bolo mozne metodu prekrit
+* zabranime pomocou slova `final`
