@@ -335,3 +335,7 @@ public class Kvader extends Obdlznik {
 
 ### ak nechceme aby bolo mozne metodu prekrit
 * zabranime pomocou slova `final`
+* `final` zabrani prekrytiu ale nezabarni pretazeniu
+
+### ak chceme aby bolo nuitne metodu prekrit
+* napisanim slova `abstract` v rodicovskej triede, vynutime v dcerskej tirede naprogramovat metodu s rovnakym nazvom inak sa program neprelozi
