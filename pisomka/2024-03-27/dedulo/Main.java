@@ -48,7 +48,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         
     
-
+// priradenie bezvyznamnych placeholderov na zamedzenie pridavku blbosti do pola
         int[] zreb = {88,88,88,88,88,88};
         int[] lotto = {88,88,88,88,88,88};
         int controlA = 0;

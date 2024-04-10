@@ -337,5 +337,23 @@ public class Kvader extends Obdlznik {
 * zabranime pomocou slova `final`
 * `final` zabrani prekrytiu ale nezabarni pretazeniu
 
-### ak chceme aby bolo nuitne metodu prekrit
-* napisanim slova `abstract` v rodicovskej triede, vynutime v dcerskej tirede naprogramovat metodu s rovnakym nazvom inak sa program neprelozi
+### ak chceme aby bolo nutne metodu prekrit
+* napisanim slova `abstract` v rodicovskej triede, vynutime v dcerskej triede naprogramovat metodu s rovnakym nazvom inak sa program neprelozi
+* astraktna metoda ma len hlavicku!
+* akonahle trieda obsahuje abstraktnu metodu, musi cela trieda by `abstract`
+
+### ak nechceme aby bolo mozne triedu zdedit
+* zabezpecime to slovom `final` pred nazvom triedy, trieda sa stava koncovou a nemoze sa stat rodicom
+* takato trieda nesmie obsahovat abstraktnu metodu, `final` a `abstract` by mali protichodny ucinok
+
+### prekrytie premennej
+* u primitivnych datovych typov to ma vyznam len vtedy ak potrebujeme premennu s rovnakym nazvom ale ineho typu
+* u referencnych datovych typov dosiahneme v triede potomka specializacie tejto clenskej premennej
+* k prekrytiu premennej sa da dostat v metodach instancie pomocou `super`
+* v metodach triedy to nieje mozne, pretoze staticke metody nemozu pouzivat metody objektov
+
+
+## Trieda Object
+
+* triedy su organizovane v hierarchickej dedicnej postupnosti
+* na vrchole je trieda `java.lang.Object`

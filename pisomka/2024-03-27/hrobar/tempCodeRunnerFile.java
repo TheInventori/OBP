@@ -1,0 +1,1 @@
+ na nastavenie vsetkych prvkov pola na 99, aby metoda sort davala este nezadane prvky pola
