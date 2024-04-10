@@ -1,14 +1,16 @@
 /**
  * Rodic
  */
-public class Rodic {
+abstract class Rodic {
 
     public int i;
     public Rodic(){
         i = 1;
     }
 
-    final int getI(){
-        return i;
+    abstract int getI();
+
+    final void setI(int noveI){
+        i = noveI;
     }
 }
