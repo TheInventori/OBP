@@ -333,14 +333,22 @@ public class Kvader extends Obdlznik {
 }
 ```
 
+### Problemy s neimplicitnymi konstruktormi
+* pri vyuziti dedicnosti pri konstrukcii objektu typu potomok musi byt vzdy mozne vyvolat konstruktor rodica
+* su 2 moznosti:
+    1. ak v rodicovi je konstruktor bez parametrov alebo implicitny, tak konstruktor v potomkovi moze byt implicitny
+    1. ak v rodicovi je konstruktor s parametrom, tak explicitny konstruktor potomka musi existovat a ako svoj prvy prikaz musi volat pomocou slovicka super(konstruktor_rodica)
+* aby sme usetrili starosti buducim potomkom triedy, odporuca sa v rodicovskej triede pripravit aj 1 konstruktor bez parametrov
+
+
 ### ak nechceme aby bolo mozne metodu prekrit
 * zabranime pomocou slova `final`
-* `final` zabrani prekrytiu ale nezabarni pretazeniu
+* `final` zabrani prekrytiu ale nezabrani pretazeniu
 
 ### ak chceme aby bolo nutne metodu prekrit
 * napisanim slova `abstract` v rodicovskej triede, vynutime v dcerskej triede naprogramovat metodu s rovnakym nazvom inak sa program neprelozi
 * astraktna metoda ma len hlavicku!
-* akonahle trieda obsahuje abstraktnu metodu, musi cela trieda by `abstract`
+* akonahle trieda obsahuje abstraktnu metodu, musi cela trieda byt `abstract`
 
 ### ak nechceme aby bolo mozne triedu zdedit
 * zabezpecime to slovom `final` pred nazvom triedy, trieda sa stava koncovou a nemoze sa stat rodicom
@@ -356,4 +364,16 @@ public class Kvader extends Obdlznik {
 ## Trieda Object
 
 * triedy su organizovane v hierarchickej dedicnej postupnosti
-* na vrchole je trieda `java.lang.Object`
+* na vrchole je trieda `java.lang.Object`, ktora definuje zakladny stav a spravanie vsetkych objektov v programe
+* ak neuvedieme triede predka, dosadi sa jej trieda `Object`, tato trieda nema ziadne zvonku dostupne datove prvky
+* ma metody ktore:
+    1. pouzivatel moze preprogramovat (prekryt):
+        * `clone()`
+        * `equals()`
+        * `hashCode()`
+        * `finalize()`
+        * `toString()`
+    1. finalne:
+        * `getClass()`
+        * `notify()`
+        * `wait()`
