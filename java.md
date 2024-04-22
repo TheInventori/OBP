@@ -377,3 +377,107 @@ public class Kvader extends Obdlznik {
         * `getClass()`
         * `notify()`
         * `wait()`
+
+### Metoda `toString()`
+
+* obsahuje ju kazdy objekt bez ohladu na to, ci ma s retazcami nieco spolocne
+* je deklarovana v korenovej triede `Object`
+* vracia retazec tvoreny menom triedy, znakom `@` a cislom, ktore predstavuje jednoznacnu identifikaciu objektu
+* poskytuje znakovu reprezentaciu objektu
+* odporuca sa k prekrytiu
+
+## Trieda StringBuffer
+* menitelny retazec
+* umoznuje menit jednotlive znaky retazca a zvacsovat alebo zmensovat znaky retazca
+* vsetky znaky retazca maju hodnotu \u0000
+* metoda `length()` vrati aktualnu dlzku retazca a `capacity()` vrati maximalnu dlzku retazca
+* dalsie metody:
+    * `ensureCapacity(int k)`
+    * `setLength(int k)`
+    * `reverse()` - obrati cely retazec
+    * `append(jeden parameter)` - prida na koniec lubovolny zakladny datovy typ
+
+### Konverzia zo StringBuffer na String
+* metoda `toString()` - prevedie cely retazec
+* metoda `subString()` - prevedie cast retazca od zadaneho indexu, vratane toho indexu
+
+## Dedicnost vs Kompozicia
+* objekty triedy mozu byt datovymi prvkami inych tried vdaka kompozicii, ktora naviac dovoluje vyuzit opakovane (viackrat sucasne) datove vlastnosti inej triedy
+* nedovoluje zmenu vlastnosti triedy
+* je - dedicnost -> pes JE zviera -> dedicnost
+* ma - kompozicia -> pes MA datum narodenia -> kompozicia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+ked si sa sem doscrolloval tak musis byt riadny kokot 💀💀💀💀
