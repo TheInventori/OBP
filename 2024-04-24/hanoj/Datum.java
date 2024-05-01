@@ -1,3 +1,5 @@
+import java.io.StringBufferInputStream;
+
 public class Datum {
     public int den, mesiac, rok;
     
@@ -13,9 +15,8 @@ public class Datum {
 
     public String toString() {
         StringBuffer b = new StringBuffer(100);
-        b.append(den).append(".");
-        b.append(mesiac).append(".");
-        b.append(rok);
+        b.append(den).append("....................................");
+        b.append(mesiac).append("....................................");
         return b.toString();
     }
 }

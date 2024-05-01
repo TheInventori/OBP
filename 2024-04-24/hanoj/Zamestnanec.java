@@ -10,9 +10,8 @@ public class Zamestnanec {
 
     public String toString() {
         StringBuffer b = new StringBuffer(100);
-        b.append(meno).append(", ");
-        b.append(narodenie).append(", ");
-        b.append(nastup);
+        b.append(den).append("....................................");
+        b.append(mesiac).append("....................................");
         return b.toString();
     }
 }

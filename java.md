@@ -407,15 +407,121 @@ public class Kvader extends Obdlznik {
 * je - dedicnost -> pes JE zviera -> dedicnost
 * ma - kompozicia -> pes MA datum narodenia -> kompozicia
 
+## GUI - Graphical User Interface
+* Graficke kniznice: `awt` (velmi stare), `Swing`, `Java FX`
+* V jave sa vsetky tlacidla, okna a textove plochy nazyvaju komponenty
+* Komponenty su umiestnene v kontajneroch napr. JFrame alebo JPanel
+1. V ramci projektu vytvorime triedu - napr.  `TutorialGUI.java`, ktora bude obsahovat metodu main
+1. Dalej vytvorime triedu napr. `Gui.java`, ktora bude dedit z triedy `JFrame`, ktora sa nachadza v balicku `javax.Swing.JFrame`
+1. Kniznice musime najprv naimportovat:
 
+Subor Gui.java
+```Java
+import javax.swing.*;
+import java.awt.*;
 
+public class Gui extends JFrame{
+    public Gui(){
+        super("Kalkulacka");
+    }
+} 
+```
 
+Subor TutorialGUI.java
+```Java
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
 
+public class TutorialGUI{
+    public static void main(String[] args) {
+        Gui okno = new Gui(); // vytvori novy objekt okno
+        okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // program skonci po zatvoreni okna
+        okno.setVisible(true); // visible = true
+        okno.setSize(1000, 1000); // velkost okna
+        okno.setLocationRelativeTo(null);
+    }
+}
+```
 
+### JTextField
+* `JTextField nazovTextFieldu = new JTextField ("Text v TextFielde", 5);`
+* pole pre zapis
+* 1. parameter - text, 2. parameter - velkost
 
+### JButton
+* `JButton nazovTlacidla = new JButton("Text na tlacitku");`
+* tlacidlo
+* parameter je text, ktory ma byt na tlacidle
 
+### JLabel 
+* `JLabel nazovLabelu = new JLabel("Text na Labeli");`
+* stitok, do ktoreho mozeme umiestint text
+* ako parameter prebera nejaky retazec (text)
 
+### Rozmiestnenie komponentov v okne (Layout)
+* Java ma 8 layoutov
+* Jeden z nich je `FlowLayout`
+    * vsetko vycentruje a umiestnuje zhora
+    ```Java
+    FlowLayout layout = new FlowLayout();
+    setLayout(layout);
+    ```
 
+### Pridanie komponentov do okna, metoda `add()`
+* ako parameter berie komponent
+* `add(cislo1Field);`
+* `add(cislo2Field);`
+* `add(scitajBut);`
+* `add(vysledokLab);`
+
+### Panely
+* kedze nie je dobre komponenty pridavat priamo do okna, vytvorime si dva panely, do ktorych sa komponenty umiestnia
+* v triede Gui vytvorime objekty:
+    * ```Java
+        private JPanel panel1;
+        private JPanel panel2;
+      ```
+* do konstruktora(pred komponenty) pridame:
+    * ```Java
+        panel1 = new JPanel();
+        add(panel1);
+        panel2 = new JPanel();
+        add(panel2)
+      ```
+* nasledne komponendy umiestnime do jednotlivych panelov:
+    * `panel1.add(komponent)`
+#### Zmena farby panela
+* metoda `setBackground()`
+```Java
+// nasa vlastna farba
+Color farba = new Color(145, 146, 54);
+
+// preddefinovana farba
+panel1.setBackground(Color.red);
+
+// nasa farba
+panel2.setBackground(farba)
+```
+### Udalosti
+1. Uzivatel vyvola udalost kliknutim na tlacidlo
+1. Na tlacidlo je pridany posluchac udalosti t.j. event listener = objekt novovytvorenej triedy, do ktorej implementujeme metody
+1. System vyvola metodu a nieco sa stane
+
+```Java
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+// toto do konstruktora
+scitajBut.addActionListener(
+    new ActionListener() {
+        public void actionPerformed(ActionEvent evt){
+            int prveCislo = Integer.parseInt(cislo1Field.getText());
+            int druheCislo = Integer.parseInt(cislo2Field.getText());
+            int vysledok = prveCislo + druheCislo;
+            vysledokLab.setText("Vysledok je: " + vysledok);
+        };
+    });
+```
 
 
 
