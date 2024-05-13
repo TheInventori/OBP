@@ -436,6 +436,8 @@ public class TutorialGUI{
     public static void main(String[] args) {
         Gui okno = new Gui(); // vytvori novy objekt okno
         okno.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // program skonci po zatvoreni okna
+        // okno.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        // okno.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         okno.setVisible(true); // visible = true
         okno.setSize(1000, 1000); // velkost okna
         okno.setLocationRelativeTo(null);
@@ -465,6 +467,19 @@ public class TutorialGUI{
     ```Java
     FlowLayout layout = new FlowLayout();
     setLayout(layout);
+    ```
+* `GridBagLayout`
+    ```Java
+    GridBagLayout layout = new GridBagLayout(); // rozdelenie okna na tabulku s bunkami
+    setLayout(layout);
+
+    GridBagConstraints gbc = new GridBagConstraints(); //na urcovanie suradnic
+    gbc.insets = new Insets(10, 10, 10, 10); // vymedzenie priesoru medzi bunkami
+
+
+    gbc.gridx = 0; // toto menim podla toho kde to chcem
+    gbc.gridy = 0; // toto menim podla toho kde to chcem
+    pozadie.add(cislo1Label, gbc);
     ```
 
 ### Pridanie komponentov do okna, metoda `add()`
@@ -502,6 +517,16 @@ panel1.setBackground(Color.red);
 // nasa farba
 panel2.setBackground(farba)
 ```
+
+#### Zmena farby okna
+* musim vytvorit kontajner (hned za nazvom okna)
+```Java
+super("Kalkulacka");
+
+Container pozadie = getContentPane();
+pozadie.setBackground(Color.yellow);
+```
+
 ### Udalosti
 1. Uzivatel vyvola udalost kliknutim na tlacidlo
 1. Na tlacidlo je pridany posluchac udalosti t.j. event listener = objekt novovytvorenej triedy, do ktorej implementujeme metody
@@ -558,6 +583,17 @@ scitajBut.addActionListener(
 
 
 
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br>
