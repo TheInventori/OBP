@@ -69,8 +69,8 @@ public class GUI extends JFrame {
   public class Event implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
-            double cislo1 = Double.parseDouble(cislo1Field.getText());
-            double cislo2 = Double.parseDouble(cislo2Field.getText());
+            int cislo1 = Integer.parseInt(cislo1Field.getText());
+            int cislo2 = Integer.parseInt(cislo2Field.getText());
             double vysledok = 0;
     
             Vypocet vypocet = new Vypocet(cislo1, cislo2);
@@ -86,7 +86,7 @@ public class GUI extends JFrame {
             }
     
             vysledokLab.setText("Vysledok je: " + String.valueOf(vysledok));
-        } catch (Exception ex) {
+        } catch (Exception exception) {
             vysledokLab.setText("Chyba");
         }
     }
