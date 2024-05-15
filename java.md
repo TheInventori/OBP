@@ -549,6 +549,20 @@ scitajBut.addActionListener(
 ```
 
 
+## lejauty svingu
+* flou lejaut `(FlowLayout)`
+    * vedla seba
+* boks lejaut `(BoxLayout)`
+    * pod sebou
+* border lejaut `(BorderLayout)`
+    * urobi 3 stlpce
+* kard lejaut `(CardLayout)`
+    * viac komponentov na jednom mieste
+* gritbek lejaut `(GridBagLayout)`
+    * tabulka
+* grup lejaut `(GroupLayout)`
+    * kompikovany raz horizontalny, raz vertikalny
+* sprink lejaut `(SpringLayout)`
 
 
 
