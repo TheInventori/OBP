@@ -564,7 +564,10 @@ scitajBut.addActionListener(
     * kompikovany raz horizontalny, raz vertikalny
 * sprink lejaut `(SpringLayout)`
 
-
+# zadanie na znamku
+* vytvorite kalkulacku BMI
+* nacitate meno, prizvisko, rodne cislo, vaha, vyska
+* vypocitat a zobrazit datum narodenia, vek, bmi a dochodkovy vek, pohlavie
 
 
 
