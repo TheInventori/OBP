@@ -568,3 +568,7 @@ scitajBut.addActionListener(
 * vytvorite kalkulacku BMI
 * nacitate meno, prizvisko, rodne cislo, vaha, vyska
 * vypocitat a zobrazit datum narodenia, vek, bmi a dochodkovy vek, pohlavie
+
+# 4. rocnik
+## Vkladanie
+* ako datovy typ datovej polozky vyuzijeme nami definovanu triedu
